@@ -20,7 +20,7 @@ for (let i = 0; i < data.length; i++) {
 
 // to determine how long our input is, we create a variable called n. The length of our data array is equal to n.
 
-
+//how our algorithm grows as n grows. as n goes to 3 to 300, we run the loop from 3 times to 300 times.
 
 
 
