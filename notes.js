@@ -53,4 +53,69 @@ for (let j = 0; j < data2.length; j++) {
 
 
 // EXAMPLE 3 ******************************
+const data = ["A", "B", "C"];
+const data2 = [1,2,3,4,5]
+
+for (let j = 0; j < data2.length; j++) {
+  for (let i = 0; j < data.length; i++) {
+    console.log(data[i] + data2[j] );
+  }
+}
+
+// O( n * a) to represent how long this algorithm takes. If we increase the data2 to [1,2,3,4,5,6], our algorithm will loop through one more time for each element in inside of our data because we have these nested loops inside. Your big o notation becomes quite scalable quickly. 
+// ****************************** 
+
+
+
+
+
+// EXAMPLE 4 ******************************
+const data = ["A", "B", "C"];
+
+for (let j = 0; j < data.length; j++) {
+  for (let i = 0; j < data.length; i++) {
+    console.log(data[i] + data[j]);
+  }
+}
+
+//O(n^2) because every single time we loop through we have to loop through n again for each element of n. 
+// ****************************** 
+
+
+
+
+
+// EXAMPLE 5 ******************************
+const data = ["A", "B", "C"];
+
+for (let j = 0; j < data.length; j++) {
+  for (let i = 0; j < data.length; i++) {
+    console.log(data[i] + data[j]);
+    console.log(data[i] + data[j]);
+    console.log(data[i] + data[j]);
+    console.log(data[i] + data[j]);
+  }
+}
+
+// you would think this would be O(4n^2), but when you are doing big o notation, one thing you are always going to do is remove any leading constants. We don't really care it's 4n^2 because 4 is meaningless. What we really care about is n^2. It will tell how the algorithm grows over time so we could completely remove any leading constants. So it becomes O(n^2).
+
+// Again, we only care how it grows based on the input. Any extra constant and any extra number added, we can just completely remove. 
+// ****************************** 
+
+
+
+
+// EXAMPLE 6 ******************************
+const data = ["A", "B", "C"];
+
+for (let j = 0; j < data.length; j++) {
+  for (let i = 0; j < data.length; i++) {
+    console.log(data[i] + data[j]);
+    console.log(data[i] + data[j]);
+    console.log(data[i] + data[j]);
+    console.log(data[i] + data[j]);
+  }
+}
+
+// ****************************** 
 
