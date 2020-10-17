@@ -6,7 +6,6 @@
 // how much slower will it get and how much space will it take up compared to other similar algorithms based on the same sets of inputs. 
 
 
-
 // EXAMPLE 1 ******************************
 const data = ["A", "B", "C"];
 
@@ -18,7 +17,7 @@ for (let i = 0; i < data.length; i++) {
 // B
 // C
 
-//as we increase the input, how long will our algorithm take? how does it scale as we increase the scale? in order to figure out, we have to figure out what the CORE part. The core part is console.log(i). It is the one thing that the algorithm does over and over again to get the end result and we take this and determine how many times it runs based on how large our input is. 
+//as we increase the input, how long will our algorithm take? how does it scale as we increase the scale? in order to figure out, we have to figure out what the CORE part is. The core part is console.log(i). It is the one thing that the algorithm does over and over again to get to the end result and we take this and determine how many times it runs based on how large our input is. 
 
 // to determine how long our input is, we create a variable called n. The length of our data array is equal to n.
 
@@ -26,6 +25,8 @@ for (let i = 0; i < data.length; i++) {
 
 // Example 1's big o notation is O(n). As our input scales from 3 to 300, our algorithm is going to scale in time linearly. It grows 1 to 1 with the size of our input. 
 // ****************************** 
+
+
 
 
 
@@ -44,7 +45,7 @@ for (let j = 0; j < data2.length; j++) {
 
 
 //n represents data and a represents the length of data2. 
-//So our algorithm is going to scale based on the length of data1 and data2. We have a big o of O(n+ a)
+//So our algorithm is going to scale based on the length of data1(n) and data2(a). We have a Big O of O(n+ a)
 // we loop through everything in data2(which is a) and we loop through everything in data1(n times) because it's the length of of data1. We have n + a length loop here. 
 // ****************************** 
 
@@ -60,7 +61,7 @@ for (let j = 0; j < data2.length; j++) {
   }
 }
 
-// O( n * a) to represent how long this algorithm takes. If we increase the data2 to [1,2,3,4,5,6], our algorithm will loop through one more time for each element in inside of our data because we have these nested loops inside. Your big o notation becomes quite scalable quickly. 
+// O(n * a) to represent how long this algorithm takes. If we increase the data2 to [1,2,3,4,5,6], our algorithm will loop through one more time for each element in inside of our data because we have these nested loops inside. Your big o notation becomes quite scalable quickly. 
 // ****************************** 
 
 
@@ -84,7 +85,7 @@ for (let j = 0; j < data.length; j++) {
 const data = ["A", "B", "C"];
 
 for (let j = 0; j < data.length; j++) {
-  for (let i = 0; j < data.length; i++) {
+  for (let j = 0; j < data.length; i++) {
     console.log(data[i] + data[j]);
     console.log(data[i] + data[j]);
     console.log(data[i] + data[j]);
@@ -108,7 +109,7 @@ for (let j = 0; j < data.length; j++) {
   }
 }
 
-for (let i = 0; j < data.length; i++) {
+for (let i = 0; i < data.length; i++) {
   console.log(data[i]);
 }
 
@@ -127,9 +128,7 @@ for (let i = 0; i < data.length; i++) {
   console.log(data[i])
 }
 
-
 //space complexity is 0 because we are not adding extra space and we are not creating anything inside of it. Therefore we could call this big O of 1 or O(1). The space is going to be constant; the space doesn't change as our input size scales and we are not creating anything inside of this. 
-
 // ****************************** 
 
 
@@ -157,8 +156,6 @@ for (let i = 0; i < data.length; i++) {
   }
 }
 
-//it will have a space complexity of O(n^2) because we have this output[i], which will be 3 times the size of our input because out input is 3. 
-
-
+//it will have a space complexity of O(n^2) because we have this out[i], which will be 3 times the size of our input because out input is 3. 
 // ****************************** 
 
