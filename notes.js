@@ -5,6 +5,8 @@
 
 // how much slower will it get and how much space will it take up compared to other similar algorithms based on the same sets of inputs. 
 
+
+
 // EXAMPLE 1 ******************************
 const data = ["A", "B", "C"];
 
@@ -24,8 +26,6 @@ for (let i = 0; i < data.length; i++) {
 
 // Example 1's big o notation is O(n). As our input scales from 3 to 300, our algorithm is going to scale in time linearly. It grows 1 to 1 with the size of our input. 
 // ****************************** 
-
-
 
 
 
@@ -50,8 +50,6 @@ for (let j = 0; j < data2.length; j++) {
 
 
 
-
-
 // EXAMPLE 3 ******************************
 const data = ["A", "B", "C"];
 const data2 = [1,2,3,4,5]
@@ -67,8 +65,6 @@ for (let j = 0; j < data2.length; j++) {
 
 
 
-
-
 // EXAMPLE 4 ******************************
 const data = ["A", "B", "C"];
 
@@ -80,7 +76,6 @@ for (let j = 0; j < data.length; j++) {
 
 //O(n^2) because every single time we loop through we have to loop through n again for each element of n. 
 // ****************************** 
-
 
 
 
@@ -104,18 +99,66 @@ for (let j = 0; j < data.length; j++) {
 
 
 
-
 // EXAMPLE 6 ******************************
 const data = ["A", "B", "C"];
 
 for (let j = 0; j < data.length; j++) {
   for (let i = 0; j < data.length; i++) {
     console.log(data[i] + data[j]);
-    console.log(data[i] + data[j]);
-    console.log(data[i] + data[j]);
-    console.log(data[i] + data[j]);
   }
 }
+
+for (let i = 0; j < data.length; i++) {
+  console.log(data[i]);
+}
+
+
+// O(n^2 + n) because we are looping through n^2 times at the first for loop and n times in the second for loop. But, when we see this kind of scenerio, we cut off all of the things that scale less. Since n^2 scales way quicker than n, we can get rid of n. We don't care about the things that scale less. So it becomes O(n^2)
+
+// ****************************** 
+
+
+
+
+// EXAMPLE 7 ******************************
+const data = ["A", "B", "C"];
+
+for (let i = 0; i < data.length; i++) {
+  console.log(data[i])
+}
+
+
+//space complexity is 0 because we are not adding extra space and we are not creating anything inside of it. Therefore we could call this big O of 1 or O(1). The space is going to be constant; the space doesn't change as our input size scales and we are not creating anything inside of this. 
+
+// ****************************** 
+
+
+// EXAMPLE 8 ******************************
+const data = ["A", "B", "C"];
+const out = []
+
+for (let i = 0; i < data.length; i++) {
+  out[i] = data[i];
+}
+
+//we are creating a brand new array from the values inside of our data. It will have a space complexity of n because the output is going to be exact same length as our input. They are going to be a length of 3. The amount of space/memory it takes up is exactly the same amount of inputs of our element. 
+// ****************************** 
+
+
+
+// EXAMPLE 9 ******************************
+const data = ["A", "B", "C"];
+const out = []
+
+for (let i = 0; i < data.length; i++) {
+  out[i] = []
+  for (let j = 0; j < data.length; j++) {
+    out[i][j] = data[j];
+  }
+}
+
+//it will have a space complexity of O(n^2) because we have this output[i], which will be 3 times the size of our input because out input is 3. 
+
 
 // ****************************** 
 
